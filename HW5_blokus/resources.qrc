@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/assets">
+        <file>blankbutton.png</file>
+        <file>Bluebutton.png</file>
+        <file>Greenbutton.png</file>
+        <file>Orangebutton.png</file>
+        <file>Pinkbutton.png</file>
+        <file>Purplebutton.png</file>
+        <file>Redbutton.png</file>
+        <file>Yellowbutton.png</file>
+    </qresource>
+</RCC>

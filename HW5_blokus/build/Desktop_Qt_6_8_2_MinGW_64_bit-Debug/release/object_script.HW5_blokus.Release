@@ -1,0 +1,12 @@
+release/board.o
+release/game.o
+release/main.o
+release/player.o
+release/plotwindow.o
+release/shape.o
+release/shapefactory.o
+release/shapeitem.o
+release/qrc_resources.o
+release/moc_game.o
+release/moc_plotwindow.o
+release/moc_shapeitem.o
