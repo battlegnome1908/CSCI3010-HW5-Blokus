@@ -36,8 +36,8 @@ PlotWindow::PlotWindow(QWidget *parent)
     ui->piecesGraphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
     ui->piecesGraphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
-    QVector<Shape*> test_shapes = ShapeFactory::PremadeShapes();
-    //QColor test_color = QColor(0, 255, 255);
+    // QVector<Shape*> test_shapes = ShapeFactory::PremadeShapes();
+    // QColor test_color = QColor(0, 255, 255);
 
     // initializing game
     QVector<Shape*> shape_pool = ShapeFactory::PremadeShapes();
@@ -251,11 +251,15 @@ void PlotWindow::UpdatePlayerStats(int player_index, const Player* player) {
 
 void PlotWindow::AdjustVisiblePlayers(int player_count) {
     if (player_count < 4) {
-        QWidget* p4 = ui->p4verticalLayout->parentWidget();
-        if (p4) p4->hide();
+        ui->p4label->hide();
+        ui->p4nameLabel->hide();
+        ui->placedLabel_4->hide();
+        ui->remainingLabel_4->hide();
     }
     if (player_count < 3) {
-        QWidget* p3 = ui->p3verticalLayout->parentWidget();
-        if (p3) p3->hide();
+        ui->p3label->hide();
+        ui->p3nameLabel->hide();
+        ui->placedLabel_3->hide();
+        ui->remainingLabel_3->hide();
     }
 }

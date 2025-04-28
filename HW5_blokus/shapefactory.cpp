@@ -28,7 +28,7 @@ QVector<Shape*> ShapeFactory::PremadeShapes(){
 
     shapes.append(new Shape(10, {QPoint(0, 0), QPoint(0, 1), QPoint(0, 2), QPoint(0, 3), QPoint(0,4)}, "Piece-10"));    // Piece-10: Vertical Line of 5
 
-    //TODO 10-21
+    //TODO 11-21
 
     return shapes;
 }
