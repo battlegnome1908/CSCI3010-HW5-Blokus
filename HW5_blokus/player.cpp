@@ -48,7 +48,7 @@ void Player::removeRemaining(Shape* x){
  */
 void Player::removeRemainingByID(int id) {
     for (int i = 0; i < remaining_.size(); ++i) {
-        if (remaining_[i]->GetID() == id) {
+        if (remaining_[i]->GetShapeID() == id) {
             remaining_.remove(i);
             return;
         }
@@ -71,10 +71,30 @@ void Player::removePlaced(Shape* x){
  */
 void Player::removePlacedByID(int id) {
     for (int i = 0; i < placed_.size(); ++i) {
-        if (placed_[i]->GetID() == id) {
+        if (placed_[i]->GetShapeID() == id) {
             placed_.remove(i);
             return;
         }
     }
 }
-
+/**
+ * @brief Sets the player's ability bool to the new passed state
+ * @param state State we want the ability to be set to
+ */
+void Player::setBomb(bool state){
+    has_bomb_ = state;
+}
+/**
+ * @brief Sets the player's ability bool to the new passed state
+ * @param state State we want the ability to be set to
+ */
+void Player::setMirror(bool state){
+    has_mirror_ = state;
+}
+/**
+ * @brief Sets the player's ability bool to the new passed state
+ * @param state State we want the ability to be set to
+ */
+void Player::setWild(bool state){
+    has_wild_ = state;
+}

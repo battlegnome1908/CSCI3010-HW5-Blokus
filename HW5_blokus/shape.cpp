@@ -11,7 +11,8 @@
  * @param name Display name of the shape
  */
 Shape::Shape(int id, const QVector<QPoint>& blocks, const QString& name)
-    : shape_id_(id), blocks_(blocks), name_(name) {}
+    : blocks_(blocks), shape_id_(id), name_(name) {}
+
 
 /**
  * @brief Gets the blocks that make up this shape
@@ -65,4 +66,8 @@ QRect Shape::BoundingRect() const {
  */
 Shape* Shape::Clone() const {
     return new Shape(shape_id_ ,blocks_, name_);
+}
+
+void Shape::SetID(int id){
+    shape_id_ = id;
 }

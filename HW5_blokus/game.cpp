@@ -3,6 +3,7 @@
  * @brief Implementation of the Game class for managing Blokus game state
  */
 #include "game.h"
+#include "shapefactory.h"
 #include <QDebug>
 
 /**
@@ -45,4 +46,61 @@ void Game::NextTurn() {
     ++turn_count_;
 
     emit PlayerChanged(GetCurrentPlayer());
+}
+
+/**
+ * @brief Returns the player associated with pid
+ * @param pid player id to return
+ * @return a player object associated with the pid
+ */
+Player* Game::FindPlayerByPID(int pid) const {
+    for (Player* player : players_) {
+        if (player->GetPID() == pid) return player;
+    }
+    return nullptr;
+}
+
+/**
+ * @brief resets the entire game.
+ */
+void Game::Reset() {
+    // Clear existing players
+    for (Player* player : players_) {
+        delete player;
+    }
+    players_.clear();
+
+    // Reset the board
+    board_->Reset();
+
+    // Recreate players
+    int num_players = num_players_;
+    QVector<Shape*> shape_pool = ShapeFactory::PremadeShapes();
+    for (int i = 0; i < num_players; ++i) {
+        QString name = "Player " + QString::number(i + 1);
+        Player* player = new Player(i + 1, name, GetDefaultColor(i), shape_pool);
+        players_.append(player);
+    }
+
+    current_player_index_ = 0;
+}
+
+/**
+ * @brief Default colors to set players to upon a restart
+ * @param index the index of the player
+ * @return
+ */
+QColor Game::GetDefaultColor(int index) const {
+    static QVector<QColor> colors = {
+        Qt::red,
+        Qt::blue,
+        Qt::green,
+        Qt::yellow
+    };
+
+    if (index >= 0 && index < colors.size()) {
+        return colors[index];
+    } else {
+        return Qt::black; // fallback color for errors
+    }
 }

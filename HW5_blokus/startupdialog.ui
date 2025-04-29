@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>startupDialog</class>
+ <widget class="QDialog" name="startupDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>555</width>
+    <height>414</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #2E003E;</string>
+  </property>
+  <widget class="QLabel" name="titleLabel">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>10</y>
+     <width>341</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Welcome to the Redesigned Blokus!</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="playerCountLabel">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>80</y>
+     <width>231</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>How many players will play?</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="playerCountSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>74</y>
+     <width>42</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+   <property name="minimum">
+    <number>2</number>
+   </property>
+   <property name="maximum">
+    <number>4</number>
+   </property>
+   <property name="value">
+    <number>4</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Player1Label_1">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>140</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Player 1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="playerNameLabel_1">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>140</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Name</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="P1plainTextEdit_1">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>130</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>first player's name here!</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="colorlabel_1">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>140</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Color</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Player1Label_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>200</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Player 2</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="P1plainTextEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>190</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>second player's name here!</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="playerNameLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>200</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Name</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="colorlabel_2">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>200</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Color</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Player1Label_3">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>260</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Player 3</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="P1plainTextEdit_3">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>250</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>third player's name here!</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="playerNameLabel_3">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>260</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Name</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="colorlabel_3">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>260</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Color</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Player1Label_4">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>320</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Player 4</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="P1plainTextEdit_4">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>310</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>...I think you got this.</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="playerNameLabel_4">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>320</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Name</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="colorlabel_4">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>320</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Color</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="p1ColorButton">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>140</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>choose!</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="p2ColorButton">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>200</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>choose!</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="p3ColorButton">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>260</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>choose!</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="p4ColorButton">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>320</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>choose!</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>531</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Orientation::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>531</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="lineWidth">
+    <number>2</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Orientation::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="DonePushButton">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>370</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Done!</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

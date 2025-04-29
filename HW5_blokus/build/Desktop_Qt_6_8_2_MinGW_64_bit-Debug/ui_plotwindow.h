@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -33,21 +34,25 @@ public:
     QHBoxLayout *playerStatshorizontalLayout;
     QVBoxLayout *p1verticalLayout;
     QLabel *p1label;
+    QFrame *p1line;
     QLabel *p1nameLabel;
     QLabel *placedLabel;
     QLabel *remainingLabel;
     QVBoxLayout *p2verticalLayout;
     QLabel *p2label;
+    QFrame *p2line;
     QLabel *p2nameLabel;
     QLabel *placedLabel_2;
     QLabel *remainingLabel_2;
     QVBoxLayout *p3verticalLayout;
     QLabel *p3label;
+    QFrame *p3line;
     QLabel *p3nameLabel;
     QLabel *placedLabel_3;
     QLabel *remainingLabel_3;
     QVBoxLayout *p4verticalLayout;
     QLabel *p4label;
+    QFrame *p4line;
     QLabel *p4nameLabel;
     QLabel *placedLabel_4;
     QLabel *remainingLabel_4;
@@ -61,6 +66,11 @@ public:
     QLabel *instructLabel_2;
     QLabel *instructLabel_3;
     QLabel *instructLabel_4;
+    QLabel *instructLabel_5;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout;
+    QPushButton *SkipPushButton;
+    QPushButton *EndGamePushButton;
 
     void setupUi(QMainWindow *PlotWindow)
     {
@@ -95,7 +105,7 @@ public:
         piecesLabel->setGeometry(QRect(950, 60, 91, 16));
         horizontalLayoutWidget = new QWidget(centralwidget);
         horizontalLayoutWidget->setObjectName("horizontalLayoutWidget");
-        horizontalLayoutWidget->setGeometry(QRect(730, 410, 531, 86));
+        horizontalLayoutWidget->setGeometry(QRect(730, 410, 531, 95));
         playerStatshorizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         playerStatshorizontalLayout->setObjectName("playerStatshorizontalLayout");
         playerStatshorizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -106,6 +116,13 @@ public:
         p1label->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         p1verticalLayout->addWidget(p1label);
+
+        p1line = new QFrame(horizontalLayoutWidget);
+        p1line->setObjectName("p1line");
+        p1line->setFrameShape(QFrame::Shape::HLine);
+        p1line->setFrameShadow(QFrame::Shadow::Sunken);
+
+        p1verticalLayout->addWidget(p1line);
 
         p1nameLabel = new QLabel(horizontalLayoutWidget);
         p1nameLabel->setObjectName("p1nameLabel");
@@ -134,6 +151,13 @@ public:
 
         p2verticalLayout->addWidget(p2label);
 
+        p2line = new QFrame(horizontalLayoutWidget);
+        p2line->setObjectName("p2line");
+        p2line->setFrameShape(QFrame::Shape::HLine);
+        p2line->setFrameShadow(QFrame::Shadow::Sunken);
+
+        p2verticalLayout->addWidget(p2line);
+
         p2nameLabel = new QLabel(horizontalLayoutWidget);
         p2nameLabel->setObjectName("p2nameLabel");
         p2nameLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
@@ -161,6 +185,13 @@ public:
 
         p3verticalLayout->addWidget(p3label);
 
+        p3line = new QFrame(horizontalLayoutWidget);
+        p3line->setObjectName("p3line");
+        p3line->setFrameShape(QFrame::Shape::HLine);
+        p3line->setFrameShadow(QFrame::Shadow::Sunken);
+
+        p3verticalLayout->addWidget(p3line);
+
         p3nameLabel = new QLabel(horizontalLayoutWidget);
         p3nameLabel->setObjectName("p3nameLabel");
         p3nameLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
@@ -187,6 +218,13 @@ public:
         p4label->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         p4verticalLayout->addWidget(p4label);
+
+        p4line = new QFrame(horizontalLayoutWidget);
+        p4line->setObjectName("p4line");
+        p4line->setFrameShape(QFrame::Shape::HLine);
+        p4line->setFrameShadow(QFrame::Shadow::Sunken);
+
+        p4verticalLayout->addWidget(p4line);
 
         p4nameLabel = new QLabel(horizontalLayoutWidget);
         p4nameLabel->setObjectName("p4nameLabel");
@@ -253,6 +291,26 @@ public:
         instructLabel_4->setObjectName("instructLabel_4");
         instructLabel_4->setGeometry(QRect(990, 640, 251, 21));
         instructLabel_4->setWordWrap(true);
+        instructLabel_5 = new QLabel(centralwidget);
+        instructLabel_5->setObjectName("instructLabel_5");
+        instructLabel_5->setGeometry(QRect(990, 660, 251, 21));
+        instructLabel_5->setWordWrap(true);
+        verticalLayoutWidget = new QWidget(centralwidget);
+        verticalLayoutWidget->setObjectName("verticalLayoutWidget");
+        verticalLayoutWidget->setGeometry(QRect(730, 630, 191, 56));
+        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        SkipPushButton = new QPushButton(verticalLayoutWidget);
+        SkipPushButton->setObjectName("SkipPushButton");
+
+        verticalLayout->addWidget(SkipPushButton);
+
+        EndGamePushButton = new QPushButton(verticalLayoutWidget);
+        EndGamePushButton->setObjectName("EndGamePushButton");
+
+        verticalLayout->addWidget(EndGamePushButton);
+
         PlotWindow->setCentralWidget(centralwidget);
 
         retranslateUi(PlotWindow);
@@ -283,12 +341,15 @@ public:
         remainingLabel_4->setText(QCoreApplication::translate("PlotWindow", "Remaining:", nullptr));
         label->setText(QCoreApplication::translate("PlotWindow", "Abilities", nullptr));
         bombPushButton->setText(QCoreApplication::translate("PlotWindow", "Bomb", nullptr));
-        mirrorPushButton->setText(QCoreApplication::translate("PlotWindow", "Mirror Placed", nullptr));
+        mirrorPushButton->setText(QCoreApplication::translate("PlotWindow", "Copy Cat", nullptr));
         WildPushButton->setText(QCoreApplication::translate("PlotWindow", "Design Your Own", nullptr));
         instructLabel->setText(QCoreApplication::translate("PlotWindow", "How To Play:", nullptr));
         instructLabel_2->setText(QCoreApplication::translate("PlotWindow", "Rules: After the first block of yours is played, each of your next placements MUST connect via a diagonal to one of your already placed pieces.", nullptr));
         instructLabel_3->setText(QCoreApplication::translate("PlotWindow", "Game ends when no player can make a move and has expended all Placing Abilities (Mirror and DYO).", nullptr));
         instructLabel_4->setText(QCoreApplication::translate("PlotWindow", "Press 'r' to rotate, or use your scroll wheel.", nullptr));
+        instructLabel_5->setText(QCoreApplication::translate("PlotWindow", "Right click or ESC to cancel.", nullptr));
+        SkipPushButton->setText(QCoreApplication::translate("PlotWindow", "Skip Turn", nullptr));
+        EndGamePushButton->setText(QCoreApplication::translate("PlotWindow", "End Game", nullptr));
     } // retranslateUi
 
 };

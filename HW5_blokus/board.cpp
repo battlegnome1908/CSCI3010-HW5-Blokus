@@ -102,5 +102,53 @@ void Board::PlaceShape(const Shape* shape, const QPoint& topLeft, const QColor& 
         grid_[row][col].occupied = true;
         grid_[row][col].color = color;
         grid_[row][col].pid = pid;
+        grid_[row][col].shape_id = shape->GetShapeID();
+    }
+}
+
+/**
+ * @brief Removes the piece from cell specified at this row, col
+ * @param row The row of the cell to be removed
+ * @param col The col of the cell to be removed
+ */
+void Board::ClearCell(int row, int col) {
+    if (row >= 0 && row < rows_ && col >= 0 && col < cols_) {
+        grid_[row][col].occupied = false;
+        grid_[row][col].color = Qt::transparent;
+        grid_[row][col].pid = -1;
+    }
+}
+
+/**
+ * @brief Getter for cell pid
+ * @param row of desired cell
+ * @param col of desired cell
+ * @return pid int
+ */
+int Board::GetCellPID(int row, int col) const {
+    return grid_[row][col].pid;
+}
+
+/**
+ * @brief Getter for shape's pid
+ * @param row of desired cell
+ * @param col of desired cell
+ * @return shape id integer
+ */
+int Board::GetCellShapeID(int row, int col) const {
+    return grid_[row][col].shape_id;
+}
+
+/**
+ *  @brief Clears out the whole board for a new game.
+ */
+void Board::Reset() {
+    for (int r = 0; r < rows_; ++r) {
+        for (int c = 0; c < cols_; ++c) {
+            grid_[r][c].occupied = false;
+            grid_[r][c].color = Qt::transparent;
+            grid_[r][c].pid = -1;
+            grid_[r][c].shape_id = -1;
+        }
     }
 }

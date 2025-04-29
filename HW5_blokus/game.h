@@ -4,7 +4,6 @@
 #include <QObject>
 #include <QVector>
 #include "player.h"
-#include "shape.h"
 #include "board.h"
 
 class Game : public QObject {
@@ -23,6 +22,12 @@ public:
     int GetCurrentPlayerIndex() const { return current_player_index_; }
     QVector<Player*> GetAllPlayers() const { return players_; }
     int GetNumPlayers() const { return num_players_; }
+    Player* FindPlayerByPID(int pid) const;
+    QColor GetDefaultColor(int index) const;
+
+
+    void Reset(); // new game /restart
+
 
 signals:
     void PlayerChanged(Player* new_player);

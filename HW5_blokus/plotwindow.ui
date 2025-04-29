@@ -88,7 +88,7 @@
       <x>730</x>
       <y>410</y>
       <width>531</width>
-      <height>86</height>
+      <height>95</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="playerStatshorizontalLayout">
@@ -101,6 +101,13 @@
          </property>
          <property name="alignment">
           <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="p1line">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
          </property>
         </widget>
        </item>
@@ -143,6 +150,13 @@
         </widget>
        </item>
        <item>
+        <widget class="Line" name="p2line">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QLabel" name="p2nameLabel">
          <property name="text">
           <string>p2_name</string>
@@ -181,6 +195,13 @@
         </widget>
        </item>
        <item>
+        <widget class="Line" name="p3line">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QLabel" name="p3nameLabel">
          <property name="text">
           <string>p3_name</string>
@@ -215,6 +236,13 @@
          </property>
          <property name="alignment">
           <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="p4line">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
          </property>
         </widget>
        </item>
@@ -282,7 +310,7 @@
      <item>
       <widget class="QPushButton" name="mirrorPushButton">
        <property name="text">
-        <string>Mirror Placed</string>
+        <string>Copy Cat</string>
        </property>
       </widget>
      </item>
@@ -355,6 +383,48 @@
     <property name="wordWrap">
      <bool>true</bool>
     </property>
+   </widget>
+   <widget class="QLabel" name="instructLabel_5">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>660</y>
+      <width>251</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Right click or ESC to cancel.</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>630</y>
+      <width>191</width>
+      <height>56</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="SkipPushButton">
+       <property name="text">
+        <string>Skip Turn</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="EndGamePushButton">
+       <property name="text">
+        <string>End Game</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
  </widget>

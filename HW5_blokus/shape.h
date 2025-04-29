@@ -15,9 +15,9 @@ class Shape
 {
 public:
     Shape(int id, const QVector<QPoint>& blocks, const QString& name);
+    void SetID(int id);
 
-    int GetID() const {return shape_id_; };
-
+    int GetShapeID() const {return shape_id_;}
     const QVector<QPoint>& Blocks() const;
     void RotateCW();
     QString Name() const;

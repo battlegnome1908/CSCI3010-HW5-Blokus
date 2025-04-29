@@ -15,8 +15,10 @@ SOURCES += \
     player.cpp \
     plotwindow.cpp \
     shape.cpp \
+    shapecreationdialog.cpp \
     shapefactory.cpp \
-    shapeitem.cpp
+    shapeitem.cpp \
+    startupdialog.cpp
 
 HEADERS += \
     board.h \
@@ -24,11 +26,15 @@ HEADERS += \
     player.h \
     plotwindow.h \
     shape.h \
+    shapecreationdialog.h \
     shapefactory.h \
-    shapeitem.h
+    shapeitem.h \
+    startupdialog.h
 
 FORMS += \
-    plotwindow.ui
+    plotwindow.ui \
+    shapecreationdialog.ui \
+    startupdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

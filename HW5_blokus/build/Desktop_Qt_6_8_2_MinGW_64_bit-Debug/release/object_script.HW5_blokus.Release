@@ -4,9 +4,13 @@ release/main.o
 release/player.o
 release/plotwindow.o
 release/shape.o
+release/shapecreationdialog.o
 release/shapefactory.o
 release/shapeitem.o
+release/startupdialog.o
 release/qrc_resources.o
 release/moc_game.o
 release/moc_plotwindow.o
+release/moc_shapecreationdialog.o
 release/moc_shapeitem.o
+release/moc_startupdialog.o

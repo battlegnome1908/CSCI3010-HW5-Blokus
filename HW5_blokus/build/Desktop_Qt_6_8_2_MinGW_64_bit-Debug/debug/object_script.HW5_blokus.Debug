@@ -4,9 +4,13 @@ debug/main.o
 debug/player.o
 debug/plotwindow.o
 debug/shape.o
+debug/shapecreationdialog.o
 debug/shapefactory.o
 debug/shapeitem.o
+debug/startupdialog.o
 debug/qrc_resources.o
 debug/moc_game.o
 debug/moc_plotwindow.o
+debug/moc_shapecreationdialog.o
 debug/moc_shapeitem.o
+debug/moc_startupdialog.o
