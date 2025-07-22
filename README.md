@@ -70,11 +70,11 @@ User-tested through both physical prototypes and in-app gameplay:
 
 ## 🧭 Roadmap
 
-- [ ] Finalize and test ability system
-- [ ] Add player scoring and game-end logic
-- [ ] Dynamically scale board to player count
-- [ ] Build leaderboard and stat tracking
-- [ ] Complete the full 21-piece set with randomized piece distribution
+- [o] Finalize and test ability system
+- [X] Add player scoring and game-end logic
+- [X] Dynamically scale board to player count
+- [X] Build leaderboard and stat tracking
+- [X] Complete the full 21-piece set with randomized piece distribution
 
 ---
 
